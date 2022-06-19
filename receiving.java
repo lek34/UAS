@@ -8,11 +8,7 @@ public class receiving {
         this.pembayaran = pembayaran;
     }
 
-    public static void cetakterimaBarang(){
-        ArrayList<receiving> Receipt = new ArrayList<receiving>();
-        Receipt.add(new receiving("12345", "Budi", "50000"));
-        Receipt.add(new receiving("12346", "Alex", "100000"));
-        Receipt.add(new receiving("12347", "Andi", "200000"));
+    public static void cetakterimaBarang(ArrayList<receiving> Receipt){
         int temp = 1;
         for (receiving rcv : Receipt){
             System.out.println(temp + "." + rcv.toString());

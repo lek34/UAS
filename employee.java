@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class employee {
     private String kodePegawai, namaPegawai, alamat;
 
@@ -8,6 +10,7 @@ public class employee {
     }
 
     public void gethistoriPenerimaan(){
+        ArrayList<employee> Employees = new ArrayList<employee>();
         
     }
 
