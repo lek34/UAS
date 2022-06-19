@@ -16,6 +16,7 @@ public class receiving {
         int temp = 1;
         for (receiving rcv : Receipt){
             System.out.println(temp + "." + rcv.toString());
+            temp++;
         }    
     }
     
