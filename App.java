@@ -13,10 +13,14 @@ public class App{
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
+        System.out.println("Selamat Datang Di Toko Aku");
+        System.out.print("1. Tambah Penerimaan Barang : ");
+        System.out.println("2. Cetak Terima Barang : ");
         int pilihan = scanner.nextInt();
         while(true){
             switch(pilihan){
-                case 1 : tambahPenerimaanBarang(Receipt, scanner);
+                case 1 : App.tambahPenerimaanBarang(null, scanner);
+                case 2 : receiving.cetakterimaBarang();
             }
         }   
     }

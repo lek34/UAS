@@ -8,7 +8,7 @@ public class receiving {
         this.pembayaran = pembayaran;
     }
 
-    public void cetakterimaBarang(){
+    public static void cetakterimaBarang(){
         ArrayList<receiving> Receipt = new ArrayList<receiving>();
         Receipt.add(new receiving("12345", "Budi", "50000"));
         Receipt.add(new receiving("12346", "Alex", "100000"));
