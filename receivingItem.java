@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class receivingItem {
     private item barang;
     private String kodereceivingItem;
@@ -11,6 +14,25 @@ public class receivingItem {
         this.hargaSatuan = hargaSatuan;
         this.total = total;
     }
+
+    public void getDetailItem(){
+        System.out.print(barang.getKodeItem());
+        System.out.println(barang.getNamaItem());
+        System.out.println(barang.getKategori());
+        System.out.println(barang.getStock());
+    }
+
+    public void updateStok(ArrayList<item> daftarItem){
+        boolean found = false;
+        for(item itm : daftarItem){
+            if (barang.getKodeItem()==itm.getKodeItem()){
+                itm.addStock(kuantitiTerima);
+                found = true;
+            }
+        }
+    }
+
+    
 
     public item getBarang() {
         return this.barang;

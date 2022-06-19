@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 public class receiving {
     private String kodePenerimaan, supplier, pembayaran;
 
@@ -7,6 +8,18 @@ public class receiving {
         this.supplier = supplier;
         this.pembayaran = pembayaran;
     }
+
+    public static void tambahPenerimaanBarang(ArrayList<receiving> Receipt,Scanner scanner){
+        scanner.nextLine();
+        System.out.print("Kode Penerimaan Barang : ");
+        String kodePenerimaan = scanner.nextLine();
+        System.out.print("Nama Supplier : ");
+        String supplier = scanner.nextLine();
+        System.out.print("Pembayaran : ");
+        String pembayaran = scanner.nextLine();
+        Receipt.add(new receiving(kodePenerimaan, supplier, pembayaran));
+    }
+
 
     public static void cetakterimaBarang(ArrayList<receiving> Receipt){
         int temp = 1;

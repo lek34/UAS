@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class item {
     private String kodeItem ,namaItem, kategori;
     private int stock;
@@ -8,6 +11,31 @@ public class item {
         this.kategori = kategori;
         this.stock = stock;
     }
+    public static void tambahBarang(ArrayList<item> Menerima , Scanner scanner){
+        scanner.nextLine();
+        System.out.print("1. Masukkan Kode Barang : ");
+        String kodeItem = scanner.nextLine();
+        System.out.print("2. Nama Item : ");
+        String namaItem = scanner.nextLine();
+        System.out.print("3. Kategori : ");
+        String kategori = scanner.nextLine();
+        System.out.print("4. Stock Kuantitas : ");
+        int stock = scanner.nextInt();
+        Menerima.add(new item(kodeItem, namaItem, kategori, stock));
+    }
+
+    public static void cetakBarang(ArrayList<item> Menerima){
+        int temp = 0;
+        for (item itm : Menerima){
+            System.out.println(itm.toString());
+            temp++;
+        }
+    }
+
+    public void addStock(int count) {
+        stock += count;
+    }
+
 
     public String getKodeItem() {
         return this.kodeItem;
